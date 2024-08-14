@@ -16,6 +16,7 @@ lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
   || echo "Not supported"
 ```
 
+
 ### 1. Install Docker & Docker compose
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -33,6 +34,7 @@ chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
+
 ### 2. Install EigenLayer CLI
 ```bash
 curl -sSfL https://raw.githubusercontent.com/layr-labs/eigenlayer-cli/master/scripts/install.sh | sh -s
@@ -40,12 +42,14 @@ export PATH=$PATH:~/bin
 eigenlayer --version
 ```
 
+
 ### 3. Clone NFFL repo
 ```bash
 git clone https://github.com/NethermindEth/near-sffl.git
 cd near-sffl/setup/plugin
 cp .env.example .env
 ```
+
 
 ### 4. Create/Import Eigenlayer wallet
 ```bash
@@ -58,6 +62,7 @@ Set password & save your private key (DON'T FORGET SAVE THIS)
 eigenlayer operator keys import --key-type ecdsa "wallet_name" PRIVATEKEY (CHANGE PRIVATE BY UR PRIVATE KEY)
 ```
 
+
 ### 5. Fund your Eigen wallet
 
 You’ll need at least `1 Holesky ETH` 
@@ -68,6 +73,7 @@ Link faucet Holesky ETH:
 https://cloud.google.com/application/web3/faucet/ethereum/holesky
 
 https://holesky-faucet.pk910.de/
+
  
 ### 6. Config & register operator
 ```bash
@@ -84,6 +90,7 @@ eigenlayer operator config create
 - Select your signer type: `local_keystore`
   
 - Enter your ecdsa key path: `/root/.eigenlayer/operator_keys/joseph-test1.ecdsa.key.json`
+
 
 ### 7. Edit metadata.json
 ```bash
@@ -105,6 +112,7 @@ Sample:
    and `metadata.json`
   there.
 
+
 ### 8. Edit operator.yaml
 ```bash
 nano ~/near-sffl/setup/plugin/operator.yaml
@@ -114,6 +122,7 @@ Set URL metadatar with raw file link:
 - metadata_url:
   `https://raw.githubusercontent.com/roscuong/Nuffle/main/metadata.json`
   ![image](https://github.com/user-attachments/assets/197cbfec-4717-4396-a6ae-a8c1ce453bff)
+
 
 ### 9. Register Eigenlayer Operator (holesky)
 ```bash
@@ -130,6 +139,7 @@ eigenlayer operator status operator.yaml
 ```
 
 ![image](https://github.com/user-attachments/assets/bda55c7e-c53f-4217-aec8-9bedd315f437)
+
 
 ### 10. Setup & Register NFFL Operator
 
