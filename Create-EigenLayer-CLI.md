@@ -51,7 +51,7 @@ cp .env.example .env
 ```
 
 
-### 4. Create/Import Eigenlayer wallet
+### 4. Create/Import Eigenlayer ECDSA wallet
 ```bash
 eigenlayer operator keys create --key-type ecdsa "wallet_name" (REMEMBER CHANGE THE WALLET NAME)
 ```
@@ -62,8 +62,19 @@ Set password & save your private key (DON'T FORGET SAVE THIS)
 eigenlayer operator keys import --key-type ecdsa "wallet_name" PRIVATEKEY (CHANGE PRIVATE BY UR PRIVATE KEY)
 ```
 
+### 4. Create/Import Eigenlayer BLS wallet
+```bash
+eigenlayer operator keys create --key-type bls "wallet_name" (REMEMBER CHANGE THE WALLET NAME)
+```
+Set password & save your private key (DON'T FORGET SAVE THIS)
 
-### 5. Fund your Eigen wallet
+### Import an old key (OPTIONAL)
+```bash
+eigenlayer operator keys import --key-type bls "wallet_name" PRIVATEKEY (CHANGE PRIVATE BY UR PRIVATE KEY)
+```
+
+
+### 6. Fund your Eigen wallet
 
 You’ll need at least `1 Holesky ETH` 
 to cover the gas cost of the operator registration. Make sure to send at least 1 ETH to your Eigenlayer operator’s address
@@ -75,7 +86,7 @@ https://cloud.google.com/application/web3/faucet/ethereum/holesky
 https://holesky-faucet.pk910.de/
 
  
-### 6. Config & register operator
+### 7. Config & register operator
 ```bash
 eigenlayer operator config create
 ```
@@ -92,7 +103,7 @@ eigenlayer operator config create
 - Enter your ecdsa key path: `/root/.eigenlayer/operator_keys/joseph-test1.ecdsa.key.json`
 
 
-### 7. Edit metadata.json
+### 8. Edit metadata.json
 ```bash
 nano ~/near-sffl/setup/plugin/metadata.json
 ```
@@ -113,7 +124,7 @@ Sample:
   there.
 
 
-### 8. Edit operator.yaml
+### 9. Edit operator.yaml
 ```bash
 nano ~/near-sffl/setup/plugin/operator.yaml
 ```
@@ -124,7 +135,7 @@ Set URL metadatar with raw file link:
   ![image](https://github.com/user-attachments/assets/197cbfec-4717-4396-a6ae-a8c1ce453bff)
 
 
-### 9. Register Eigenlayer Operator (holesky)
+### 10. Register Eigenlayer Operator (holesky)
 ```bash
 eigenlayer operator register operator.yaml
 ```
@@ -141,7 +152,7 @@ eigenlayer operator status operator.yaml
 ![image](https://github.com/user-attachments/assets/bda55c7e-c53f-4217-aec8-9bedd315f437)
 
 
-### 10. Setup & Register NFFL Operator
+### 11. Setup & Register NFFL Operator
 
 **At this initial testnet stage, operators need to be whitelisted. If you are interested and have not already been whitelisted, please contact the NFFL team!**
 
