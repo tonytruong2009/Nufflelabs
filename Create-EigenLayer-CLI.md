@@ -57,16 +57,21 @@ eigenlayer operator keys create --key-type ecdsa "wallet_name" (REMEMBER CHANGE 
 ```
 Set password & save your private key (DON'T FORGET SAVE THIS)
 
+---------------------------
+
 ### Import an old key (OPTIONAL)
 ```bash
 eigenlayer operator keys import --key-type ecdsa "wallet_name" PRIVATEKEY (CHANGE PRIVATE BY UR PRIVATE KEY)
 ```
 
-### 4. Create/Import Eigenlayer BLS wallet
+
+### 5. Create/Import Eigenlayer BLS wallet
 ```bash
 eigenlayer operator keys create --key-type bls "wallet_name" (REMEMBER CHANGE THE WALLET NAME)
 ```
 Set password & save your private key (DON'T FORGET SAVE THIS)
+
+------------------------------
 
 ### Import an old key (OPTIONAL)
 ```bash
