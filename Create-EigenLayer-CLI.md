@@ -53,7 +53,7 @@ cp .env.example .env
 
 ### 4. Create/Import Eigenlayer ECDSA wallet
 ```bash
-eigenlayer operator keys create --key-type ecdsa "wallet_name" (REMEMBER CHANGE THE WALLET NAME)
+eigenlayer operator keys create --key-type ecdsa "wallet" (REMEMBER wallet is the name. You can change other name)
 ```
 Set password & save your private key (DON'T FORGET SAVE THIS)
 
@@ -105,7 +105,7 @@ eigenlayer operator config create
    
 - Select your signer type: `local_keystore`
   
-- Enter your ecdsa key path: `/root/.eigenlayer/operator_keys/joseph-test1.ecdsa.key.json`
+- Enter your ecdsa key path: `/root/.eigenlayer/operator_keys/wallet.ecdsa.key.json`
 
 
 ### 8. Edit metadata.json
@@ -116,10 +116,10 @@ Sample:
 ```bash
 {
   "name": "LAOCHO",
-  "website": "https://www.josephtran.xyz",
-  "description": "Hard Worker - Learning 4ever",
-  "logo": "https://raw.githubusercontent.com/roscuong/Nuffle/main/roscuong0909.png",
-  "twitter": "https://x.com/roscuong"
+  "website": "https://github.com/tonytruong2009",
+  "description": "Go to Moon",
+  "logo": "https://raw.githubusercontent.com/tonytruong2009/Nufflelabs/main/tonytruong2009.png",
+  "twitter": "https://x.com/phat_nguyenphat"
 }
 ```
 ### IMPORTANT: Logo support .png only and less than 1Mb
@@ -136,7 +136,7 @@ nano ~/near-sffl/setup/plugin/operator.yaml
 Set URL metadatar with raw file link:
 
 - metadata_url:
-  `https://raw.githubusercontent.com/roscuong/Nuffle/main/metadata.json`
+  `https://raw.githubusercontent.com/tonytruong2009/Nufflelabs/main/metadata.json`
   ![image](https://github.com/user-attachments/assets/197cbfec-4717-4396-a6ae-a8c1ce453bff)
 
 
