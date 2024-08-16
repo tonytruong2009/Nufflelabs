@@ -67,7 +67,7 @@ eigenlayer operator keys import --key-type ecdsa "wallet_name" PRIVATEKEY (CHANG
 
 ### 5. Create/Import Eigenlayer BLS wallet
 ```bash
-eigenlayer operator keys create --key-type bls "wallet_name" (REMEMBER CHANGE THE WALLET NAME)
+eigenlayer operator keys create --key-type bls "wallet" (REMEMBER wallet is the name. You can change other name)
 ```
 Set password & save your private key (DON'T FORGET SAVE THIS)
 
@@ -115,7 +115,7 @@ nano ~/near-sffl/setup/plugin/metadata.json
 Sample:
 ```bash
 {
-  "name": "roscuong",
+  "name": "LAOCHO",
   "website": "https://www.josephtran.xyz",
   "description": "Hard Worker - Learning 4ever",
   "logo": "https://raw.githubusercontent.com/roscuong/Nuffle/main/roscuong0909.png",
